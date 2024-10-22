@@ -55,7 +55,14 @@ public class HelloApplication extends Application {
 
         for (int i = 0; i <= 100; i++) {
             try {
+                //Este comando no es un hilo adicional, es un retardo.
+                /* Thread.sleep() es un método estático en Java que hace
+                                  que el hilo actual se pause durante un tiempo especificado.
+                                   En otras palabras, detiene la ejecución del hilo durante
+                                   un número determinado de milisegundos.
+                */
                 Thread.sleep(50); // Simula una tarea larga
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
